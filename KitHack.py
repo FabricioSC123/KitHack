@@ -18,20 +18,6 @@ from getch import pause
 from tkinter import Tk, filedialog
 from lib.banners import *
 from lib import kitools
-from lib.network import run_network
-
-def check_connection(host='https://www.google.com'):
-	print("{}Verificando su conexion a internet...".format(GREEN))
-	time.sleep(0.5)
-	try:
-		req = requests.get(host, timeout=15)
-		if req.status_code == 200:
-			print("{}Conexion a internet exitosa.".format(GREEN))
-			time.sleep(0.5)
-			pass
-	except:
-		print("{0}[x]:{1} Verifique su conexion a internet.".format(RED, DEFAULT))
-		exit(0)
 
 def check_permissions():
 	if os.getuid() == 0:
