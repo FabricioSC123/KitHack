@@ -4214,7 +4214,6 @@ def main():
 
 if __name__ == "__main__":
 	try:
-		check_connection()
 		check_permissions()
 		main()
 
